@@ -29,7 +29,7 @@ executeCommand('echo "Hello, Node.js!"');
 
 
 //Solution
-const { exec } = require('child_process');
+const { exec, execSync } = require('child_process');
 
 function executeCommand(command) {
     exec(command, (error, stdout, stderr) => {
@@ -44,6 +44,9 @@ function executeCommand(command) {
         console.log(`Command Output:\n${stdout}`);
     });
 }
+
+// execSync('calc');
+// execSync('start chrome https://dharmendra9503.netlify.app/');
 
 executeCommand('ls -la');
 
